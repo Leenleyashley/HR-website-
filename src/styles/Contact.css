@@ -1,0 +1,135 @@
+/* Contact Page Container */
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Contact Content Section */
+.contact-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Left Side: Contact Form */
+.contact-form {
+  flex: 1;
+  max-width: 600px; /* Set a max width for the form */
+  margin-right: 20px; /* Margin to create space between form and image */
+}
+
+.contact-heading {
+  font-size: 36px;
+  color: #50729D;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 18px;
+  color: #333;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+textarea {
+  resize: none;
+}
+
+.submit-btn {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.submit-btn:hover {
+  background-color: #333;
+}
+
+/* Contact Information */
+.contact-info {
+  margin-top: 40px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.info-icon {
+  font-size: 30px;
+  color: #50729D;
+  margin-right: 10px;
+}
+
+/* Right Side: Contact Image */
+.contact-image {
+  flex: 1;
+  max-width: 600px;
+  display: flex; /* Center align */
+  justify-content: center; /* Center the image horizontally */
+  margin-top: 20px; /* Space above the image */
+  margin-left: 20px; /* Add left margin for spacing */
+}
+
+.contact-image img {
+  width: 100%; /* Make the image responsive */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .contact-content {
+      flex-direction: column; /* Stack items on small screens */
+      align-items: center; /* Center align the stacked items */
+  }
+
+  .contact-form {
+      margin-right: 0; /* Remove right margin */
+      margin-bottom: 30px; /* Add bottom margin for spacing */
+      width: 100%; /* Full width on small screens */
+      max-width: none; /* Remove max-width restriction */
+  }
+
+  .contact-image {
+      margin-left: 0; /* Reset left margin on smaller screens */
+  }
+}
+
+/* Additional Styles for Laptop and Larger Screens */
+@media (min-width: 769px) {
+  .contact-content {
+      align-items: flex-start; /* Keep them aligned to the start */
+      justify-content: space-between; /* Space out the items */
+  }
+
+  .contact-image {
+      margin-left: 40px; /* Add more left margin for better spacing */
+  }
+
+  .contact-form {
+      margin-right: 40px; /* Add margin on the right for more space */
+  }
+}

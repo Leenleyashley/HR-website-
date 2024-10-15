@@ -1,0 +1,138 @@
+/* Navbar Container */
+.navbar {
+  width: 100%;
+  height: 100px;
+  background-color: #50729D; /* Your preferred navbar background color */
+  display: flex;
+  flex-direction: row;
+}
+
+/* Left Side Styles */
+.navbar .leftSide {
+  flex: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 50px;
+}
+
+.navbar .leftSide img {
+  width: 70px;
+}
+
+/* Right Side Styles */
+.navbar .rightSide {
+  flex: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Links Styles */
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 20px;
+}
+
+/* Get Started Button Styles */
+.getStartedBtn {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-left: 10px; /* Space out from other links */
+}
+
+.getStartedBtn:hover {
+  background-color: #333; /* Darken on hover */
+}
+
+/* Reorder Icon Styles */
+.navbar .rightSide button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.navbar .rightSide svg {
+  font-size: 40px;
+}
+
+/* Navbar State Handling */
+.navbar #open {
+  padding-left: 0px;
+}
+
+.navbar #open img {
+  display: none;
+}
+
+.navbar #close img {
+  display: inherit;
+}
+
+.navbar #open .hiddenLinks {
+  display: inherit;
+  margin-left: 30px;
+}
+
+.navbar #close .hiddenLinks {
+  display: none;
+}
+
+.navbar #open a {
+  width: 70px;
+  margin: 5px;
+}
+
+/* Media Queries for Responsiveness */
+@media only screen and (max-width: 900px) {
+  .navbar .rightSide a {
+      width: 70px;
+  }
+  
+  .navbar .leftSide {
+      padding-left: 50px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar .rightSide a {
+      display: none; /* Hide links on smaller screens */
+  }
+
+  .navbar .rightSide {
+      justify-content: flex-end;
+      padding-right: 50px;
+  }
+
+  .navbar .rightSide button {
+      display: inherit; /* Show reorder button */
+  }
+
+  /* Show hidden links when icon is clicked */
+  .navbar #open .hiddenLinks {
+      display: flex;
+      flex-direction: column; /* Stack links vertically */
+      position: absolute; /* Position below the navbar */
+      background-color: #50729D; /* Match navbar color */
+      width: 100%;
+      padding: 10px 0;
+      z-index: 1000; /* Ensure it appears above other elements */
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .navbar .rightSide button {
+      display: none; /* Hide reorder icon on larger screens */
+  }
+
+  .hiddenLinks {
+      display: none; /* Ensure hidden links are not displayed */
+  }
+}

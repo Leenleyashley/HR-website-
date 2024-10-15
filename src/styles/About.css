@@ -1,0 +1,106 @@
+/* About Container */
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* About Content */
+  .about-content {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .about-heading {
+    font-size: 40px;
+    color: #50729D; /* Vibrant blue */
+    font-weight: bold;
+  }
+  
+  .about-description {
+    font-size: 22px;
+    margin: 20px 0;
+    color: #50729D; /* Vibrant orange */
+  }
+  
+  .about-text {
+    font-size: 18px;
+    margin: 20px 0;
+    color: #000; /* Calming green */
+  }
+  
+  .values-section, .vision-section {
+    margin-top: 30px;
+  }
+  
+  .values-heading, .vision-heading {
+    font-size: 24px;
+    color: #50729D; /* Vibrant gold */
+    margin-bottom: 10px;
+  }
+  
+  .value-item, .vision-item {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+  }
+  
+  .value-icon, .vision-icon {
+    color: #50729D; /* OrangeRed for icons */
+    margin-right: 10px;
+    font-size: 30px;
+  }
+  
+  .value-text, .vision-text {
+    font-size: 18px;
+    color: #000; /* Calming green for text */
+  }
+  
+  /* About Image */
+  .about-image {
+    flex: 0.5;
+    text-align: center; /* Center the button below the image */
+  }
+  
+  .about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Space between the image and the button */
+  }
+  
+  /* Discover More Button */
+  .discover-button {
+    background-color: #50729D;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .discover-button:hover {
+    background-color: #333; /* Slightly lighter black on hover */
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    .about-container {
+      flex-direction: column;
+    }
+  
+    .about-content {
+      margin-right: 0;
+    }
+  
+    .about-image {
+      margin-top: 20px;
+    }
+  }
+  
